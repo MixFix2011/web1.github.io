@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="/static/deps/css/admin.css">
+    <link rel="stylesheet" href="/static/deps/css/load.css">
+
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="/static/deps/javascript/check.js"></script>
+</head>
+<body>
+	<!-- Загрузка -->
+	<div class="preloader">
+		<svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<path fill="currentColor"
+				d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+			</path>
+		</svg>
+	</div>
+	<nav>
+			<div class="logo-name">
+					<div class="logo-image">
+							<a href="/">
+							<img src="/static/deps/favicon/VM.png">
+							</a>
+					</div>
+
+					<span class="logo_name">VanilaMine</span>
+			</div>
+
+			<div class="menu-items">
+					<ul class="nav-links">
+							<li><a href="#">
+									<i class="uil uil-estate"></i>
+									<span class="link-name">Приборная</span>
+							</a></li>
+							<li><a href="content.html">
+									<i class="uil uil-files-landscapes"></i>
+									<span class="link-name">Контент</span>
+							</a></li>
+							<li><a href="#">
+									<i class="uil uil-chart"></i>
+									<span class="link-name">Аналитика</span>
+							</a></li>
+							<li><a href="#">
+									<i class="uil uil-thumbs-up"></i>
+									<span class="link-name">Лайки</span>
+							</a></li>
+							<li><a href="#">
+									<i class="uil uil-comments"></i>
+									<span class="link-name">Комменты</span>
+							</a></li>
+							<li><a href="#">
+									<i class="uil uil-share"></i>
+									<span class="link-name">Поделиться</span>
+							</a></li>
+					</ul>
+					
+					<ul class="logout-mode">
+							<li><a href="/index.html">
+									<i class="uil uil-signout"></i>
+									<span class="link-name">Выйти</span>
+							</a></li>
+
+							<li class="mode">
+									<a href="#">
+											<i class="uil uil-moon"></i>
+									<span class="link-name">Темный режим</span>
+							</a>
+
+							<div class="mode-toggle">
+									<span class="switch"></span>
+									</div>
+							</li>
+					</ul>
+			</div>
+	</nav>
+
+	<section class="dashboard">
+			<div class="top">
+					<i class="uil uil-bars sidebar-toggle"></i>
+
+					<div class="search-box">
+						<i class="uil uil-search"></i>
+						<input type="text" placeholder="Search here...">
+					</div>
+			</div>
+	</section>
+				
+
+    <header>
+        <h1>Админ-панель</h1>
+        <button onclick="location.href='/index.html'">На главную</button>
+    </header>
+
+    <h2>Добавить новую картину</h2>
+    <input type="text" id="newPaintingTitle" placeholder="Название картины" />
+    <input type="url" id="newPaintingImage" placeholder="URL изображения картины" />
+    <textarea id="newPaintingDescription" placeholder="Описание картины"></textarea>
+    <input type="number" id="newPaintingPrice" placeholder="Цена картины" />
+    <button id="addPaintingButton">Добавить картину</button>
+
+    <h2>Редактирование существующих картин</h2>
+    <div id="adminPaintings"></div>
+    <h2>Расписание кружков</h2>
+    <div id="adminSchedule"></div>
+
+    <button id="saveChanges">Сохранить изменения</button>
+
+    <script src="/static/deps/javascript/data.js"></script>
+    <script src="/static/deps/javascript/admin.js"></script>
+    <script src="/static/deps/javascript/theme.js"></script>
+</body>
+</html>

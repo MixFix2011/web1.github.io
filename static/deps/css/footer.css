@@ -1,7 +1,4 @@
-body {
-  margin: 0 auto;
-}
-
+/* Подвал */
 #footer {
   background-color: var(--footer-bg);
   border-radius: 30px;
@@ -12,7 +9,7 @@ body {
   text-decoration: none;
   font-size: large;
   width: auto;
-  transition: background-color 0.5s ease-in-out;
+  transition: var(--tran-03);
   user-select: none
 }
 

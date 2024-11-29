@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>VanilaMine</title>
+        <link rel="stylesheet" href="static/deps/css/login.css">
+    </head>
+    <body class="dark">
+
+        
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form method='post' id='loginForm'>
+            <h3>Вход</h3>
+            <!-- имя -->
+            <label for="username">Имя</label>
+            <input type="text" name="login" placeholder="Логин" id="username" required>
+            <!-- пароль -->
+            <label for="password">Пароль</label>
+            <input type="password" name="password" placeholder="Пароль" id="password" required>
+            <!-- войти -->
+            <input class="button" type="submit" value="Войти" onClick="type()">
+            <div class="social">
+            <div class="go"><i class="fab fa-google"></i>  Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> <a href="index.html">На главную</a> </div>
+            </div>
+        </form>
+        <script src="static/deps/javascript/login.js"></script>
+        <script src="static/deps/javascript/theme.js"></script>
+    </body>
+</html>
