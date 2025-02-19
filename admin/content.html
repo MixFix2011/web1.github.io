@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Админ-панель</title>
-    <link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="/static/deps/css/admin.css">
-    <link rel="stylesheet" href="/static/deps/css/load.css">
 
-		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="/static/deps/javascript/check.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VanilaMine - Админ-контент</title>
+	<link rel="stylesheet" href="../static/deps/css/content.css">
+	<link rel="stylesheet" href="../static/deps/css/selector.css">
+	<link rel="stylesheet" href="../static/deps/css/load.css">
+	<link rel="stylesheet" href="../static/deps/css/footer.css">
+
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+	<link rel="icon" type="image/png" href="../static/deps/favicon/VM.png">
 </head>
+
 <body>
 	<!-- Загрузка -->
 	<div class="preloader">
@@ -20,7 +24,8 @@
 			</path>
 		</svg>
 	</div>
-	<nav>
+	<!-- навигационная панель -->
+	<!-- <nav>
 			<div class="logo-name">
 					<div class="logo-image">
 							<a href="/">
@@ -33,7 +38,7 @@
 
 			<div class="menu-items">
 					<ul class="nav-links">
-							<li><a href="#">
+							<li><a href="main.html">
 									<i class="uil uil-estate"></i>
 									<span class="link-name">Приборная</span>
 							</a></li>
@@ -77,41 +82,89 @@
 							</li>
 					</ul>
 			</div>
-	</nav>
+	</nav> -->
 
-	<section class="dashboard">
-			<div class="top">
-					<i class="uil uil-bars sidebar-toggle"></i>
-
-					<div class="search-box">
-						<i class="uil uil-search"></i>
-						<input type="text" placeholder="Search here...">
-					</div>
+	<header>
+		<div class="main-sw">
+			<div class="sw">
+				<div class="mode-toggle">
+					<span class="switch"></span>
+				</div>
 			</div>
-	</section>
-				
+		</div>
+		<h1>Админ-панель</h1>
+		<button onclick="location.href='../index.html'">На главную</button>
+	</header>
 
-    <header>
-        <h1>Админ-панель</h1>
-        <button onclick="location.href='/index.html'">На главную</button>
-    </header>
+	<h2>Добавить новую картину</h2>
+	<div class="admin-item">
+		<input type="text" id="newPaintingTitle" placeholder="Название картины" />
+		<input type="url" id="newPaintingImage" placeholder="URL изображения картины" value="static/deps/images/" />
+		<textarea id="newPaintingDescription" placeholder="Описание картины"></textarea>
+		<input type="number" id="newPaintingPrice" placeholder="Цена картины" />
+		<label>Ориентация:</label>
+		<label>
+			<input type="radio" name="orientation" value="vertical" checked> Вертикальная
+		</label>
+		<label>
+			<input type="radio" name="orientation" value="horizontal"> Горизонтальная
+		</label>
 
-    <h2>Добавить новую картину</h2>
-    <input type="text" id="newPaintingTitle" placeholder="Название картины" />
-    <input type="url" id="newPaintingImage" placeholder="URL изображения картины" />
-    <textarea id="newPaintingDescription" placeholder="Описание картины"></textarea>
-    <input type="number" id="newPaintingPrice" placeholder="Цена картины" />
-    <button id="addPaintingButton">Добавить картину</button>
+		<button id="addPaintingButton">Добавить картину</button>
+	</div>
 
-    <h2>Редактирование существующих картин</h2>
-    <div id="adminPaintings"></div>
-    <h2>Расписание кружков</h2>
-    <div id="adminSchedule"></div>
 
-    <button id="saveChanges">Сохранить изменения</button>
+	<h2>Добавить новую панель</h2>
+	<div class="admin-item">
+		<input type="text" id="newVanilamineTitle" placeholder="Название панели" />
+		<input type="url" id="newVanilamineImage" placeholder="URL изображения панели" value="static/deps/images/" />
+		<textarea id="newVanilamineDescription" placeholder="Описание панели"></textarea>
+		<input type="number" id="newVanilaminePrice" placeholder="Цена панели" />
+		<label>Ориентация:</label>
+		<label>
+			<input type="radio" name="orientation" value="vertical" checked> Вертикальная
+		</label>
+		<label>
+			<input type="radio" name="orientation" value="horizontal"> Горизонтальная
+		</label>
 
-    <script src="/static/deps/javascript/data.js"></script>
-    <script src="/static/deps/javascript/admin.js"></script>
-    <script src="/static/deps/javascript/theme.js"></script>
+		<button id="addVanilamineButton">Добавить панель</button>
+	</div>
+
+	<h2>Добавить новый мастер-класс</h2>
+  <div class="admin-item">
+    <input type="text" id="newMasterTitle" placeholder="Название мастер-класса" />
+    <input type="url" id="newMasterImage" placeholder="URL изображения мастер-класса" />
+    <textarea id="newMasterDescription" placeholder="Описание мастер-класса"></textarea>
+    <input type="number" id="newMasterPrice" placeholder="Цена мастер-класса" />
+    <input type="date" id="newMasterDate" placeholder="Дата проведения" />
+    <input type="time" id="newMasterTime" placeholder="Время начала" />
+
+    <button id="addMasterButton">Добавить мастер-класс</button>
+  </div>
+
+	<h2>Редактирование картин</h2>
+	<div id="adminPaintings"></div>
+
+	<h2>Редактирование панелей</h2>
+	<div id="adminVanilamines"></div>
+
+	<h2>Расписание кружков</h2>
+	<div id="adminMasters"></div>
+
+	<button class="saveChanges" id="saveChanges">Сохранить изменения</button>
+
+	<!-- footer -->
+	<a class="link" target="_blank" href="https://t.me/VanilaMine_2023">
+		<div id="footer" class="link">
+			<span class="copyright">©</span>VanilaMine_2023 The developer of MixFix
+		</div>
+	</a>
+
+	<script src="../static/deps/javascript/data.js"></script>
+	<script src="../static/deps/javascript/admin.js"></script>
+	<script src="../static/deps/javascript/theme.js"></script>
+	<script src="../static/deps/javascript/check.js"></script>
 </body>
+
 </html>

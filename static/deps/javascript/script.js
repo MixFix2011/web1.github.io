@@ -20,45 +20,50 @@ window.onload = function () {
     }, 500);
 }
 // page
-function loadPaintings() {
-	const paintings = JSON.parse(localStorage.getItem('paintings')) || [];
-	const paintingList = document.getElementById('paintingList');
-	paintingList.innerHTML = '';
 
-	paintings.forEach((painting) => {
+function loadVanilamines() {
+	const vanilamines = JSON.parse(localStorage.getItem('vanilamines')) || [];
+	const vanilamineList = document.getElementById('vanilamineList');
+	vanilamineList.innerHTML = '';
+
+	vanilamines.forEach((vanilamine, index) => {
 			const item = document.createElement('div');
-			item.className = 'painting-item';
+			item.className = 'vanilamine-item';
 			item.innerHTML = `
-					<h3>${painting.title}</h3>
-					<img src="${painting.image}" alt="${painting.title}">
-					<p>${painting.description}</p>
-					<p class="price">Цена: <span class="number">${painting.price}</span> руб.</p>
+					<h3>${vanilamine.title}</h3>
+					<img src="${vanilamine.image}" alt="${vanilamine.title}">
+					<p>${vanilamine.description}</p>
+					<p>Цена: ${vanilamine.price} руб.</p>
+					<button onclick="location.href='vanilamine.html?id=${index}'">Купить</button>
 			`;
-			paintingList.appendChild(item);
-	});
-}
-
-
-function loadSchedule() {
-	const schedule = JSON.parse(localStorage.getItem('schedule')) || [];
-	const scheduleList = document.getElementById('scheduleList');
-	scheduleList.innerHTML = '';
-
-	schedule.forEach((item) => {
-			const row = document.createElement('tr');
-			row.innerHTML = `
-					<td>${item.club}</td>
-					<td>${item.price}</td>
-					<td>${item.date}</td>
-					<td>${item.time}</td>
-			`;
-			scheduleList.appendChild(row);
+			vanilamineList.appendChild(item);
 	});
 }
 
 // Загружается при открытии страницы
-loadPaintings();
-loadSchedule();
+loadVanilamines();
+
+
+
+// выпадающее меня
+function myFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+
+	var dropdowns = document.getElementsByClassName("dropdown-content");
+	var i;
+	for (i = 0; i < dropdowns.length; i++) {
+		var openDropdown = dropdowns[i];
+		if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		}
+	}
+}
+}
+
 
 // строка поиска
 document.getElementById('searchButton').addEventListener('click', function() {
