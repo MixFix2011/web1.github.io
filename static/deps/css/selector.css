@@ -1,0 +1,101 @@
+:root {
+	/* цвета */
+	--color-black: rgb(0, 0, 0);
+	--color-white: rgb(255, 255, 255);
+	--color-gray: gray;
+	--color-lightgray: lightgray;
+	--color-darkgray: darkgray;
+	--color-btn1: rgba(60, 60, 60, 0.288);
+	--color-btn2: rgb(190, 190, 190);
+	--color-red: rgb(255, 0, 0);
+	--color-orange: rgb(255, 165, 0);
+	--color-yellow: rgb(255, 255, 0);
+	--color-primary: #0E4BF1;
+	--color-input-bg: rgba(0, 86, 216, 0.247);
+	--color-input: #151c74;
+	--color-none: rgba(255, 255, 255, 0);
+	/* switcher */
+	--black-light-color: #707070;
+	--border-color: #e6e5e5;
+	--toggle-color: #242526;
+	--panel-color: #FFF;
+	/* фон */
+	--bg: #fffefa;
+	/* текст */
+	--text: #000;
+	/* карточки картин */
+	--bg-paint: #e0edf3;
+	--bg-classes: #e0edf3;
+	/* подвал */
+	--footer-bg: rgba(0, 0, 0, 0.040);
+	--footer-bg-h: rgba(0, 0, 0, 0.30);
+	/* switcher */
+	--light: #d8dbe0;
+	--dark: #28292c;
+	/* анимации */
+	--tran-01: all 0.1s ease;
+	--tran-02: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-05: all 0.5s ease;
+	
+	--tran-tx-01: color 0.1s ease;
+	--tran-tx-02: color 0.2s ease;
+	--tran-tx-03: color 0.3s ease;
+	--tran-tx-05: color 0.5s ease;
+
+	--tran-bg-01: background-color 0.1s ease;
+	--tran-bg-02: background-color 0.2s ease;
+	--tran-bg-03: background-color 0.3s ease;
+	--tran-bg-05: background-color 0.5s ease;
+}
+
+/* blackStyle */
+.dark {
+	/* цвета */
+	--color-black: rgb(255, 255, 255);
+	--color-white: rgb(0, 0, 0);
+	--color-gray: gray;
+	--color-lightgray: rgb(56, 56, 56);
+	--color-btn1: rgba(60, 60, 60, 0.288);
+	--color-btn2: rgb(190, 190, 190);
+	--color-red: rgb(134, 0, 0);
+	--color-orange: rgb(255, 165, 0);
+	--color-yellow: rgb(255, 255, 0);
+	--color-primary: #3A3B3C;
+	--color-input-bg: rgba(0, 86, 216, 0.247);
+	--color-input: #c8d2fd;
+	--color-none: rgba(255, 255, 255, 0);
+	/* switcher */
+	--black-light-color: #CCC;
+	--border-color: #4D4C4C;
+	--toggle-color: #FFF;
+	--panel-color: #242526;
+	/* фон */
+	--bg: #0e1621;
+	/* текст */
+	--text: #CCC;
+	/* фон товара */
+	--bg-paint: #17212b;
+	--bg-classes: #17212b;
+	/* подвал */
+	--footer-bg: rgba(0, 0, 0, 0.040);
+	--footer-bg-h: rgba(161, 161, 161, 0.3);
+	/* switcher */
+	--light: #28292c;
+	--dark: #d8dbe0;
+	/* анимации */
+	--tran-01: 0.1s ease;
+	--tran-02: 0.2s ease;
+	--tran-03: 0.3s ease;
+	--tran-05: 0.5s ease;
+
+	--tran-tx-01: color 0.1s ease;
+	--tran-tx-02: color 0.2s ease;
+	--tran-tx-03: color 0.3s ease;
+	--tran-tx-05: color 0.5s ease;
+
+	--tran-bg-01: background-color 0.1s ease;
+	--tran-bg-02: background-color 0.2s ease;
+	--tran-bg-03: background-color 0.3s ease;
+	--tran-bg-05: background-color 0.5s ease;
+}

@@ -1,172 +1,431 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    margin: auto;
+
+*{
+    box-sizing: border-box;
 }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: 'Roboto', 'Poppins', sans-serif;;
+}
+
+header h1 {
+    height: 30vh;
+    background-color: #218838;
+    animation: gradient 10s infinite linear;
+    background-size: 400%;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-black);
+    text-align: center;
+    margin-top: 10px;
+    margin: 20px;
+    font-size: 3.5vh;
+}
+
+#top-header ul{
+    margin-top: 0;
+}
+#top-header ul{
+    padding: 0;
+    list-style: none;
+}
+#top-header{  
+    text-align: center;
+    height: 60px;
+    background-color: var(--color-lightgray);
+    position: sticky;
+    top: 0em;
+    z-index: 10;
+}
+.logo{
+    float: left;
+    padding: none;
+    margin: none;
+    width: 30%;
+}
+.logo img{
+    width: 40px;
+    float: left;
+    margin: 1vh;
+}
+.logo a{
+    text-decoration: none;
+    width: 0vw;
+}
+.vanilamine{
+    color: #218838;
+    font-weight: 900;
+    text-align: left;
+    width: 10vw;
+}
+#menu{
+    float: right;
+    width: 70%;
+    height: 100%;
+    margin: none;
+    white-space: nowrap
+}
+#menu ul{
+    text-align: center;
+    float: right;
+    margin: none;
+}
+#menu li{
+    display: inline-block;
+    padding: none;
+    margin: none;
+} 
+#menu li a, #menu li span{
+    display: inline-block;
+    padding: 0em 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 60px;
+    cursor: pointer;
+    white-space: nowrap
+}
+#menu li a{
+    color: #FFF;
+}
+#menu li:hover a, #menu li span{
+    text-decoration: none;
+}
+@media(max-width: 1024px){
+}
+@media(max-width: 768px){
+    #menu li a{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 705px){
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header button {
+    padding: 1vh 1.5vh;
+    background-color: #28a745;
+    /* Зеленый для кнопки */
+    color: white;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    margin: 1vh;
+    transition: background-color 0.3s;
+    align-items: end;
+}
+
+header button:hover {
+    background-color: #218838;
+    /* Темный зеленый при наведении */
+    transform: scale(1.05);
+}
+
 
 .painting-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    transition: var(--tran-03);
+    margin: 2vh auto;
 }
 
 .painting-item {
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    padding: 20px;
-    width: 300px; /* Ширина карточки */
-    text-align: center;
-    position: relative;
-    backdrop-filter: blur(10px); /* Размытие фона */
-    border: 1px solid #ddd; /* Рамка вокруг карточки */
-    transition: transform 0.3s, box-shadow 0.3s; /* Переходы для анимации выделения */
+    background: var(--bg-paint);
+    /* Темный фон для карточек */
+    border-radius: 1vh;
+    box-shadow: 0vh 0.2vh 1vh rgba(0, 0, 0, 0.5);
+    width: calc(25% - 4vh);
+    margin: 2vh;
+    padding: 1.5vh;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .painting-item:hover {
-    transform: translateY(-5px); /* Поднятие карточки при наведении */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
-    transition: var(--tran-03);
+    transform: translateY(-0.5vh);
+    /* Поднятие карточки при наведении */
+    box-shadow: 0 0.4vh 2vh rgba(0, 0, 0, 0.7);
 }
 
 .painting-item h3 {
-    font-size: 20px;
-    margin: 10px 0;
+    margin: 1vh 0vh;
+    font-size: 2vh;
 }
 
-.painting-item img {
+.painting-item img.vertical {
+    border-radius: 0.5vh;
+    max-width: 100%;
+    height: auto;
+    width: 400vh;
+}
+
+.painting-item img.horizontal {
     border-radius: 5px;
     max-width: 100%;
-    height: auto; /* поддержка пропорций */
+    height: auto;
+    width: 100vw;
 }
-
-.painting-item p {
-    font-size: 16px;
-    color: #666; /* Серый цвет для описания */
-}
-
-.painting-item .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff; /* Цвет для цены */
-}
-.number{
-    text-decoration-line:underline;
-    text-decoration-color:#666;
-}
-
-
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
+.paint{
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 3vh;
 }
 
-header h1 {
-    margin: 0;
+.schedule-section {
+    margin: 2vh;
+    padding: 2vh;
+    background: var(--bg-classes);
+    border-radius: 1vh;
+    box-shadow: 0 0.2vh 1vh rgba(0, 0, 0, 0.5);
 }
 
-header input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    margin-top: 10px;
+.schedule-section h2 {
+    color: var(--text);
+    font-size: 3vh;
+    /* Белый цвет заголовков */
 }
+
+.schedule-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.schedule-card {
+    background: rgba(71, 15, 226, 0.979);
+    border: 0.1vh solid #444;
+    color: white;
+    border-radius: 1vh;
+    padding: 1.5vh;
+    margin: 1vh;
+    height: 30vh;
+    min-height: 30vh;
+    max-height: 10vh;
+    max-width: 60vw;
+    /* Минимальная ширина карточки */
+    box-shadow: 0vh 0.2vh 0.5vh rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.5vh;
+}
+.schedule-card {
+    /* Тут высота блока */
+    height: 300px;
+    /* Тут длина */
+    width: 100%;
+    background: linear-gradient(149deg, rgba(24, 187, 156, 1) 0%, rgba(106, 57, 175, 1) 42%, rgba(187, 24, 148, 1) 72%, rgba(115, 53, 134, 1) 100%);
+    /* 10s - скорость анимации */
+    animation: gradient 10s infinite linear;
+    /* Можно менять и подбирать интенсивность */
+    background-size: 400%;
+}
+
+.schedule-card:hover {
+    transform: translateY(-0.5vh);
+    /* Поднятие карточки при наведении */
+    box-shadow: 0vh 0.4vh 1.5vh rgba(0, 0, 0, 0.5);
+}
+
+/* мини кнопки */
+#minibutton{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 2vh;
+}
+#minibutton .item{
+    font-size: 1.73em;
+    padding: 1vh;
+    background-color: #444444;
+}
+#minibutton .item:hover{
+    background-color: #666;
+    box-shadow: 6px 6px 6px 6px black;
+}
+
+.sw {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.sw li {
+	list-style: none;
+}
+.sw{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	text-decoration: none;
+	position: relative;
+}
+.sw{
+	font-size: 24px;
+	min-width: 45px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--black-light-color);
+}
+.sw{
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--black-light-color);
+	transition: var(--tran-05);
+}
+.sw .logout-mode {
+	border-top: 1px solid var(--border-color);
+}
+
+.sw .mode {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.sw .mode-toggle {
+	position: absolute;
+	right: 14px;
+	height: 50px;
+	min-width: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.mode-toggle .switch {
+	position: relative;
+	display: inline-block;
+	height: 22px;
+	width: 40px;
+	border-radius: 25px;
+	background-color: var(--toggle-color);
+}
+.switch:before {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 15px;
+	width: 15px;
+	background-color: var(--panel-color);
+	border-radius: 50%;
+	transition: var(--tran-03);
+}
+
+.dark .switch:before {
+	left: 20px;
+}
+.sw{
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--black-light-color);
+	transition: var(--tran-05);
+}
+
+.main-sw{
+	top: 10em;
+	position: sticky;
+    top: 6em;
+}
+
+/* Адаптивность */
+@media (max-width: 1440px) {
+    .painting-item {
+        width: calc(50% - 40px);
+    }
+    .painting-item .horizontal {
+        max-width: 100vh;
+    }
+
+    .schedule-card {
+        min-width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 425px) {
+    .painting-item {
+        width: 100%;
+    }
+    .schedule-card{
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px){
+    .vanilamine{
+        display: none;
+    }
+}
+
+
+
+
 
 button {
-    padding: 10px 15px;
+    padding: 1vh 1.5vh;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
+    margin: 1vh 0;
     cursor: pointer;
-    margin: 10px;
     transition: background-color 0.3s;
+    user-select: none
 }
 
 button:hover {
     background-color: #0056b3;
 }
-
-.slider {
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    margin: 20px 0;
+button:active{
+	transform: translateY(2px);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
+	transition: var(--tran-01);
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
+
+/* === Цена === */
+.price {
+    letter-spacing: 0px;
+    font-weight: 1000;
 }
 
-.slide {
-    min-width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-}
+/* ==== Картины ===== */
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+/* ==== Мастер классы ==== */
 
-.painting-item {
-    background: #fafafa;
-    border: 1px solid #e2e2e2;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    transition: box-shadow 0.3s;
-}
 
-.painting-item:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.painting-item img {
-    border-radius: 5px;
-    max-width: 100%;
-    height: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #e2e2e2;
-    text-align: center;
-}
-
-th {
-    background-color: #f4f4f4;
-}
-
-/* Адаптивность */
+/* === хз === */
 @media (max-width: 600px) {
-    header input[type="text"] {
+    header button {
         width: 100%;
     }
 
-    button {
-        width: 100%;
-        margin: 5px 0;
+    .painting-item {
+        width: 90%;
+        /* Изменение ширины на небольших экранах */
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+
+    50% {
+        background-position: 20% 100%;
+    }
+
+    100% {
+        background-position: 80% 0%;
     }
 }

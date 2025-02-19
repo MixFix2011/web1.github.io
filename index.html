@@ -2,42 +2,102 @@
 <html lang="ru">
 
 <head>
-    <title>Test1</title>
+		<title>VanilaMine - Картины</title>
 
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" href="static\deps\css\icon.css">
-    <link rel="stylesheet" href="static\deps\css\footer.css">
-    <link rel="stylesheet" href="static\deps\css\scroll.css">
-    <link rel="stylesheet" href="static\deps\css\style.css">
-    <link rel="stylesheet" href="static\deps\css\switcher.css">
-    <link rel="icon" type="image/png" href="static/deps/favicon/VM.png">
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<link rel="stylesheet" href="static/deps/css/style.css">
+		<link rel="stylesheet" href="static/deps/css/selector.css">
+		<link rel="stylesheet" href="static/deps/css/load.css">
+		<link rel="stylesheet" href="static/deps/css/footer.css">
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+		<link rel="icon" type="image/png" href="static/deps/favicon/VM.png">
 </head>
 
 <body>
-    <div id="toggle" class="btn">
-        Сменить тему
-    </div>
+	<!-- Загрузка -->
+	<div class="preloader">
+		<svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+				<path fill="currentColor"
+						d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+				</path>
+		</svg>
+	</div>
 
-    <div class="moon"></div>
+	<div class="main-sw">
+		<div class="sw">
+			<div class="mode-toggle">
+				<span class="switch"></span>
+			</div>
+		</div>
+	</div>
+	<!-- Навигационная панель -->
+	<div id="top-header">
+		<nav>
+			<div id="menu">
+				<ul>
+					<li><a onclick="location.href='index.html'">Главная</a></li>
+					<li><a onclick="location.href='about.html'">О нас</a></li>
+					<li><a onclick="location.href='admin/service.html'">Услуги</a></li>
+					<li><a onclick="location.href='admin/contact.html'">Контакты</a></li>
+					<li><a onclick="location.href='login.html'">Админ-панель</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- хз -->
+	<div id="minibutton">
+		<button class="item">
+			<i class="bi bi-list"></i>
+		</button>
+		<div class="show">
+			<!-- контент -->
+		</div>
+	</div>
 
-    
+	<header>
+		<h1>Добро пожаловать на наш сайт</h1>
+	</header>
 
-    <div class="wrapper">
-        <div class="sun"></div> 
-    </div>
+	<!-- VanilaMine -->
+	<h2 class="paint"></h2>
+	<section id="vanilamineList" class="painting-list">
+		<!-- Здесь будут загружаться панели -->
+	</section>
 
-    <div id="one" class="one">
-        hello world
-    </div>
-    <!-- footer -->
-    <a class="link" target="_blank" href="https://t.me/VanilaMine_2023">
-        <div id="footer" class="link">
-            ©VanilaMine 2023 Powerd By MixFix
-        </div>
-    </a>
+	<!-- Картины -->
+	<div id="mixfix">
+		<h2 class="paint">Вертикальные картины</h2>
+		<section id="verticalPaintingList" class="painting-list">
+			<!-- Здесь будут загружаться вертикальные картины -->
+		</section>
 
-    <!-- Scripts -->
-    <script src="static/deps/javascript/switcher.js"></script>
+
+		<h2 class="paint">Горизонтальные картины</h2>
+		<section id="horizontalPaintingList" class="painting-list">
+			<!-- Здесь будут загружаться горизонтальные картины -->
+		</section>
+	</div>
+	
+	<section id="schedule" class="schedule-section">
+		<h2>Расписание мастер-классов</h2>
+		<table id="scheduleTable">
+			<tbody id="mastersList"></tbody>
+		</table>
+	</section>
+
+
+	<!-- footer -->
+	<a class="link" target="_blank" href="https://t.me/VanilaMine_2023">
+		<div id="footer" class="link">
+			<span class="copyright">©</span>VanilaMine_2023 The developer of MixFix
+		</div>
+	</a>
+	<!-- Scripts -->
+	<script src="static/deps/javascript/script.js"></script>
+	<script src="static/deps/javascript/theme.js"></script>
 </body>
 
 </html>

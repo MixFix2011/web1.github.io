@@ -1,205 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!----======== CSS ======== -->
-        <link rel="stylesheet" href="/static/deps/css/admin.css">
-        <link rel="stylesheet" href="/static/deps/css/load.css">
-        
 
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <script src="/static/deps/javascript/check.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Admin Panel VanilaMine</title>
-    </head>
-    <body>
-        <!-- Загрузка -->
-        <div class="preloader">
-            <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="currentColor"
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../static/deps/css/admin.css">
+    <link rel="stylesheet" href="../static/deps/css/load.css">
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="/static/deps/javascript/check.js"></script>
+
+    <link rel="icon" type="image/png" href="../static/deps/favicon/VM.png">
+
+    <title>VanilaMine - Админ-панель</title>
+</head>
+
+<body>
+    <!-- Загрузка -->
+    <div class="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
                 d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-              </path>
-            </svg>
-          </div>
-        <nav>
-            <div class="logo-name">
-                <div class="logo-image">
-                    <a href="/">
-                    <img src="/static/deps/favicon/VM.png">
-                    </a>
-                </div>
-
-                <span class="logo_name">VanilaMine</span>
+            </path>
+        </svg>
+    </div>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <a href="/">
+                    <img src="../static/deps/favicon/VM.png">
+                </a>
             </div>
 
-            <div class="menu-items">
-                <ul class="nav-links">
-                    <li><a href="#">
+            <span class="logo_name">VanilaMine</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="main.html">
                         <i class="uil uil-estate"></i>
                         <span class="link-name">Приборная</span>
                     </a></li>
-                    <li><a href="content.html">
+                <li><a href="content.html">
                         <i class="uil uil-files-landscapes"></i>
                         <span class="link-name">Контент</span>
                     </a></li>
-                    <li><a href="#">
+                <li><a href="#">
                         <i class="uil uil-chart"></i>
                         <span class="link-name">Аналитика</span>
                     </a></li>
-                    <li><a href="#">
+                <li><a href="#">
                         <i class="uil uil-thumbs-up"></i>
                         <span class="link-name">Лайки</span>
                     </a></li>
-                    <li><a href="#">
+                <li><a href="#">
                         <i class="uil uil-comments"></i>
                         <span class="link-name">Комменты</span>
                     </a></li>
-                    <li><a href="#">
+                <li><a href="#">
                         <i class="uil uil-share"></i>
                         <span class="link-name">Поделиться</span>
                     </a></li>
-                </ul>
-                
-                <ul class="logout-mode">
-                    <li><a href="/index.html">
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="../index.html">
                         <i class="uil uil-signout"></i>
                         <span class="link-name">Выйти</span>
                     </a></li>
 
-                    <li class="mode">
-                        <a href="#">
-                            <i class="uil uil-moon"></i>
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
                         <span class="link-name">Темный режим</span>
                     </a>
 
                     <div class="mode-toggle">
                         <span class="switch"></span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="dashboard">
-            <div class="top">
-                <i class="uil uil-bars sidebar-toggle"></i>
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
 
-                <div class="search-box">
-                    <i class="uil uil-search"></i>
-                    <input type="text" placeholder="Search here...">
-                </div>
-                
-                <!--<img src="images/profile.jpg" alt="">-->
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Поиск......">
             </div>
 
-            <div class="dash-content">
-                <div class="overview">
-                    <div class="title">
-                        <i class="uil uil-tachometer-fast-alt"></i>
-                        <span class="text">Приборная</span>
-                    </div>
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
 
-                    <div class="boxes">
-                        <div class="box box1">
-                            <i class="uil uil-thumbs-up"></i>
-                            <span class="text">Всего лайков</span>
-                            <span class="number">52,1488</span>
-                        </div>
-                        <div class="box box2">
-                            <i class="uil uil-comments"></i>
-                            <span class="text">Комментов</span>
-                            <span class="number">52,1488</span>
-                        </div>
-                        <div class="box box3">
-                            <i class="uil uil-share"></i>
-                            <span class="text">Всего поделилось</span>
-                            <span class="number">52,1488</span>
-                        </div>
-                    </div>
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Приборная</span>
                 </div>
 
-                <div class="activity">
-                    <div class="title">
-                        <i class="uil uil-clock-three"></i>
-                        <span class="text">Недавняя активность</span>
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Всего лайков</span>
+                        <span class="number">52,1488</span>
                     </div>
-
-                    <div class="activity-data">
-                        <div class="data names">
-                            <span class="data-title">Имя</span>
-                            <span class="data-list">Артемий лебедев</span>
-                            <span class="data-list">Екатерина Мизулина</span>
-                            <span class="data-list">Ч Мо</span>
-                            <span class="data-list">Влад А4</span>
-                            <span class="data-list">РКН</span>
-                            <span class="data-list">Maxxytren</span>
-                            <span class="data-list">
-                                <div class="spoiler">
-                                    <div>Ярик Долбаёбов</div>
-                                    <div class="hide"></div>
-                                </div>
-                                
-                            </span>
-                        </div>
-                        <div class="data email">
-                            <span class="data-title">Email</span>
-                            <span class="data-list">artemilebedev228@gmail.com</span>
-                            <span class="data-list">ekaterinamizulina@gmail.com</span>
-                            <span class="data-list">chmo@gmail.com</span>
-                            <span class="data-list">vlada4@gmail.com</span>
-                            <span class="data-list">rkn@dark.net</span>
-                            <span class="data-list">maxxytren@gimn.kachkov</span>
-                            <span class="data-list">
-                                <div class="spoiler">
-                                    <div>yarikdolbaebov@mail.otveti</div>
-                                    <div class="hide"></div>
-                                </div>
-                            </span>
-                        </div>
-                        <div class="data joined">
-                            <span class="data-title">Заходил</span>
-                            <span class="data-list">2011-01-16</span>
-                            <span class="data-list">2011-01-16</span>
-                            <span class="data-list">2011-01-16</span>
-                            <span class="data-list">2007-06-28</span>
-                            <span class="data-list">1939-01-09</span>
-                            <span class="data-list">2024-01-09</span>
-                            <span class="data-list">
-                                <div class="spoiler">
-                                    <div>2020-01-16</div>
-                                    <div class="hide"></div>
-                                </div>
-                            </span>
-                        </div>
-                        <div class="data type">
-                            <span class="data-title">Тип</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                            <span class="data-list">Натурал</span>
-                        </div>
-                        <div class="data status">
-                            <span class="data-title">Статус</span>
-                            <span class="data-list">В сети</span>
-                            <span class="data-list">В сети</span>
-                            <span class="data-list">В сети</span>
-                            <span class="data-list">Мертв</span>
-                            <span class="data-list">Не в сети</span>
-                            <span class="data-list">В сети</span>
-                            <span class="data-list">В сети</span>
-                        </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Комментов</span>
+                        <span class="number">52,1488</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Всего поделилось</span>
+                        <span class="number">52,1488</span>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <script src="/static/deps/javascript/admin.js"></script>
-        <script src="/static/deps/javascript/theme.js"></script>
-    </body>
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Недавняя активность</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Имя</span>
+                        <span class="data-list">Артемий лебедев</span>
+                        <span class="data-list">Екатерина Мизулина</span>
+                        <span class="data-list">Ч Мо</span>
+                        <span class="data-list">Влад А4</span>
+                        <span class="data-list">РКН</span>
+                        <span class="data-list">Maxxytren</span>
+                        <span class="data-list">
+                            <div class="spoiler">
+                                <div>Ярик Долбаёбов</div>
+                                <div class="hide"></div>
+                            </div>
+
+                        </span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">artemilebedev228@gmail.com</span>
+                        <span class="data-list">ekaterinamizulina@gmail.com</span>
+                        <span class="data-list">chmo@gmail.com</span>
+                        <span class="data-list">vlada4@gmail.com</span>
+                        <span class="data-list">rkn@dark.net</span>
+                        <span class="data-list">maxxytren@gimn.kachkov</span>
+                        <span class="data-list">
+                            <div class="spoiler">
+                                <div>yarikdolbaebov@mail.otveti</div>
+                                <div class="hide"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Заходил</span>
+                        <span class="data-list">2011-01-16</span>
+                        <span class="data-list">2011-01-16</span>
+                        <span class="data-list">2011-01-16</span>
+                        <span class="data-list">2007-06-28</span>
+                        <span class="data-list">1939-01-09</span>
+                        <span class="data-list">2024-01-09</span>
+                        <span class="data-list">
+                            <div class="spoiler">
+                                <div>2020-01-16</div>
+                                <div class="hide"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Тип</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                        <span class="data-list">Натурал</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Статус</span>
+                        <span class="data-list">В сети</span>
+                        <span class="data-list">В сети</span>
+                        <span class="data-list">В сети</span>
+                        <span class="data-list">Мертв</span>
+                        <span class="data-list">Не в сети</span>
+                        <span class="data-list">В сети</span>
+                        <span class="data-list">В сети</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../static/deps/javascript/admin.js"></script>
+    <script src="../static/deps/javascript/theme.js"></script>
+</body>
+
 </html>
